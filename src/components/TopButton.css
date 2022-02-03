@@ -1,0 +1,23 @@
+.upBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 10;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #fff;
+    padding: 11px 8px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon {
+    transition: .3s ease;
+}
+
+.upBtn:hover .icon {
+    transform: scale(1.3);
+}

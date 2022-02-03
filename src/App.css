@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* ========== FONTS ========== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--textColor);
+	font-family: 'Nunito Sans', sans-serif;
+	scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ========== DARK MODE VARIABLES ==========*/
+:root {
+	--headerBg: hsl(210, 22%, 23%);
+	--bodyBg: hsl(205, 26%, 17%);
+	--textColor: hsl(0, 0%, 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ========== LIGHT MODE VARIABLES ========== */
+.light-theme {
+	--headerBg: hsl(0, 0%, 95%);
+	--bodyBg: hsl(0, 0%, 85%);
+	--textColor: hsl(200, 15%, 8%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ========== CHANGE SCROLLBAR ========== */
+
+::-webkit-scrollbar { width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {	background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+body { background-color: var(--bodyBg); }
+
+img { user-select: none; }
+
+a {
+	text-decoration: none;
+	outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main { transition: .3s ease; }
+
+.btn {
+    background-color: var(--headerBg);
+    color: var(--textColor);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    border-radius: .3rem;
 }

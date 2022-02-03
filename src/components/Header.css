@@ -1,0 +1,44 @@
+/* ========== HEADER ========== */
+.header {
+    background-color: var(--headerBg);
+    transition: .3s ease;
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-weight: 800;
+}
+
+.header__mode {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 17px;
+    user-select: none;
+}
+
+.header__mode-icon {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 410px) {
+    .header__title {
+        font-size: 1.2rem;
+    }
+    .header__mode-text {
+        display: none;
+    }
+    .header__mode-img {
+        width: 20px;
+        height: 20px;
+    }
+}

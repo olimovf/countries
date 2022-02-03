@@ -1,0 +1,53 @@
+.ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    color: var(--textColor);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 0 0 10px var(--textColor);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.ring span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(128, 128, 128, .2);
+    border-radius: inherit;
+    z-index: 5;
+    border-top-color: var(--textColor);
+    border-left-color: var(--textColor);
+    animation: anim 1.5s infinite linear;
+}
+
+.ring span::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-top-color: transparent;
+    border-radius: inherit;
+    background-color: var(--textColor);
+    top: 11%;
+    left: 97%;
+    transform: translate(-97%, -11%);
+    box-shadow: 0 0 20px var(--textColor);
+}
+
+@keyframes anim {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
