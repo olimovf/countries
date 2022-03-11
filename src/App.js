@@ -11,7 +11,7 @@ function App() {
 		<Router>
 			<Header />
 			<Routes>
-				<Route path='/' element={<Main />} />
+				<Route index path='/' element={<Main />} />
 				<Route path="/countries/:countryCode" element={<Country />} />
 			</Routes>
 			<TopButton />

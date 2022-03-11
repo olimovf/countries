@@ -4,11 +4,19 @@
     align-items: flex-start;
 }
 
-.backBtn {
+.btns {
     margin: 3rem 0;
+    display: flex;
+}
+
+.btns > button {
     padding: .4rem 1.5rem;
     display: flex;
     align-items: center;
+}
+
+.backBtn {
+    margin-right: 1rem;
 }
 
 .country__data {
@@ -86,7 +94,7 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
-    .backBtn, .country__content {
+    .btns, .country__content {
         margin: 1.5rem 0;
     }
     .country__data {

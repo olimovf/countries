@@ -22,8 +22,7 @@ function Form({ filterRegion, searchCountry, getOptions }) {
             <input 
                 type="search" 
                 className="main__input" 
-                placeholder="Search for a country ..." 
-                autoFocus
+                placeholder="Search for a country ..."
                 onChange={(e) => searchCountry(e.target.value)}
             />
             <div className="main__dropdown">

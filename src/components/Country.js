@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { HiOutlineArrowLeft } from 'react-icons/hi';
+import { FaHome } from 'react-icons/fa'
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import Loading from './Loading';
 import './Country.css';
@@ -28,7 +29,10 @@ function Country() {
 
     return loading ? <Loading /> : (
         <div className='country container'>
-            <button className='btn backBtn' onClick={() => navigate(-1)}><HiOutlineArrowLeft />&nbsp; Back</button>
+            <div className="btns">
+                <button className='btn backBtn' onClick={() => navigate(-1)}><HiOutlineArrowLeft />&nbsp; Back</button>
+                <button className='btn homeBtn' onClick={() => navigate('/')}><FaHome />&nbsp; Home</button>
+            </div>
             <div className="country__data">
                 <div className="country__flag">
                     <img src={country.flags.png} alt='card' />
