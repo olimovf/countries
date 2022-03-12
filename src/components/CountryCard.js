@@ -5,7 +5,7 @@ function CountryCard({ country }) {
     return (
         <article className='main__card'>
             <Link to={`/countries/${country.cca3}`} className='main__link'>
-                <img className="main__card-img" src={country.flags.png} />
+                <img className="main__card-img" src={country.flags.png} alt={country.cca3} />
             </Link>
             <div className="main__content">
                 <h3 className="main__title">{country.name.common.length > 25 ? country.name.common.substr(0, 25) + '...' : country.name.common}</h3>
