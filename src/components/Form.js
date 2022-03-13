@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 import './Form.css';
 
@@ -6,11 +6,11 @@ function Form({ filterRegion, searchCountry, getOptions }) {
     const [showRegions, setShowRegions] = useState(false);
     const [region, setRegion] = useState('Filter by Region');
 
-    const filteredCountries = (e) => {
+    const filteredCountries = useCallback((e) => {
         const txt = e.target.innerText;
         filterRegion(txt);
         setShowRegions(false);
-    }
+    }, [filterRegion]);
 
     useEffect(() => {
         const reg = localStorage.getItem('regionCountries') ? JSON.parse(localStorage.getItem('regionCountries'))[0].region : 'Filter by Region';
