@@ -45,7 +45,7 @@ function Country() {
                         <div><h4>Region:</h4>{country.region}</div>
                         <div><h4>Sub Region:</h4>{country.subregion}</div>
                         <div><h4>Capital:</h4>{country.capital ? country.capital[0] : ''}</div>
-                        <div><h4>Top Level Domain:</h4>{country.tld[0]}</div>
+                        <div><h4>Top Level Domain:</h4>{country.tld && country.tld[0]}</div>
                         <div><h4>Currencies:</h4>{country.currencies && Object.values(country.currencies)[0].name}</div>
                         <div><h4>Languages:</h4>{country.languages && Object.values(country.languages).join(', ')}</div>
                     </div>
