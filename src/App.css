@@ -56,8 +56,6 @@ a {
     padding: 0 15px;
 }
 
-.main { transition: .3s ease; }
-
 .btn {
     background-color: var(--headerBg);
     color: var(--textColor);

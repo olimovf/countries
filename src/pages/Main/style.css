@@ -1,0 +1,14 @@
+.main__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+.main__cards {
+    display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+	gap: 2rem;
+    padding-bottom: 2rem;
+}

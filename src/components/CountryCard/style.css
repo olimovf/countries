@@ -1,14 +1,13 @@
-.main__cards {
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
-	gap: 2rem;
-    padding-bottom: 2rem;
-}
-
 .main__card {
     display: flex;
     flex-direction: column;
+    transition: .3s ease;
+    border-radius: .3rem;
 }
+
+.main__card:hover {
+    box-shadow: 0 0 12px rgba(0,0,0,.5);
+} 
 
 .main__link {
     cursor: pointer;
@@ -32,6 +31,10 @@
     font-weight: 800;
     font-size: 1.05rem;
     margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .main__subtitle {
